@@ -10,13 +10,13 @@
         ToDo一覧
       </div>
       <div class="list-group list-group-flush">
-      @foreach ($todos as $todo)
-        <div class="d-flex">
-          <a href="#" class="list-group-item list-group-item-action">
+        @foreach ($todos as $todo)
+          <!-- 編集 -->
+          <a href="{{ route('todo.show', $todo->id) }}" class="list-group-item list-group-item-action">
             {{ $todo->content }}
           </a>
+        @endforeach
         </div>
-      @endforeach
       </div>
     </div>
   </div>
