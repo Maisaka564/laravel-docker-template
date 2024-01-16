@@ -23,7 +23,6 @@ class TodoRequest extends FormRequest
      */
     public function rules()
     {
-        // 修正
         return [
             'content' => 'required|max:255',
         ];
