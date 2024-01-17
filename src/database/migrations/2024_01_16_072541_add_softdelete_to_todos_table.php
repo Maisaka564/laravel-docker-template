@@ -15,7 +15,7 @@ class AddSoftdeleteToTodosTable extends Migration
     {
         Schema::table('todos', function (Blueprint $table) {
             //
-            $table->softDeletes();
+            $table->softDeletes();//delete_at カラム（列)をtodosテーブルに追加。
         });
     }
 
@@ -28,7 +28,7 @@ class AddSoftdeleteToTodosTable extends Migration
     {
         Schema::table('todos', function (Blueprint $table) {
             //
-            $table->dropColumn('deleted_at');
+            $table->dropColumn('deleted_at');//php artisan rollbackをできるようにしてくため
         });
     }
 }

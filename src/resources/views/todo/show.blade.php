@@ -22,7 +22,7 @@
                   @csrf
                   <button type="submit" class="btn btn-danger">削除する</button>
                 </form>
-              </div>
+            </div>
         </div>
       </div>
     </div>
